@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style_form.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>FORMULARIO</h1>
+    <form
+      id="formulario"
+      action="form_get.html"
+      target="_blank"
+      method="GET"
+      class="container-fluid"
+    >
+      <ul id="list">
+        <li>
+          <label for="">Nombre y Apellidos: </label
+          ><input type="text" name="name" />
+        </li>
+        <li>
+          <label for="">Fecha de Nacimiento:</label
+          ><input type="date" name="born" />
+        </li>
+        <li>
+          <label for="">Ocupación: </label
+          ><input type="text" name="ocupation" />
+        </li>
+        <li>
+          <label for="">Telefono: </label><input type="number" name="phone" />
+        </li>
+        <li>
+          <label for="">Email: </label><input type="email" name="email" />
+        </li>
+        <li>
+          <fieldset>
+            <label>Nacionalidad:</label>
+            <select name="nationality">
+              <option value="Peru">Perú</option>
+              <option value="Español">España</option>
+              <option value="Frances">Frances</option>
+              <option value="EEUU">EEUU</option>
+              <option value="Chino">Chino</option>
+              <option value="Japones">Japones</option>
+            </select>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <label>Nivel de ingles:</label>
+            <div>
+              <input type="radio" name="ingles" value="Basico" /> Basico
+              <input type="radio" name="ingles" value="Intermedio" /> Intermedio
+              <input type="radio" name="ingles" value="Avanzado" /> Avanzado
+              <input type="radio" name="ingles" value="Fluido" /> Fluido
+            </div>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <label>Lenguajes de programación:</label>
+            <select name="lenguajes[]" multiple>
+              <option value="C++">C++</option>
+              <option value="C">C</option>
+              <option value="Javascript">Javascript</option>
+              <option value="Python">Python</option>
+              <option value="Swift">Swift</option>
+            </select>
+          </fieldset>
+        </li>
+        <li>
+          <fieldset>
+            <label>Aptitudes:</label>
+            <input list="aptt" name="aptitudes" />
+            <datalist id="aptt">
+              <option value="Inteligente">Inteligente</option>
+              <option value="Razonable">Razonable</option>
+              <option value="Liderazgo">Liderazgo</option>
+            </datalist>
+          </fieldset>
+        </li>
+        <li>
+          <label for="">Habilidades:</label>
+          <input
+            type="checkbox"
+            value="Trabajo en equipo"
+            name="hab[]"
+          />Trabajo en equipo
+          <input type="checkbox" value="Matematico" name="hab[]" /> Matematico
+          <input type="checkbox" value="Agil" name="hab[]" />Agil
+        </li>
+        <li>
+          <label for="textareaL">Descripcion: </label
+          ><textarea
+            name="description"
+            id="textareaL"
+            cols="30"
+            rows="2"
+          ></textarea>
+        </li>
+        <input type="submit" />
+      </ul>
+    </form>
+    <div class="container big-container">
+      <header class="border-bottom">
+        <img src="img/6819196.png" alt="" />
+        <div id="name"></div>
+        <div id="born"></div>
+        <div id="nationality"></div>
+        <div id="description"></div>
+        <div id="ocupation"></div>
+      </header>
+      <main>
+        <div id="main-container">
+          <div class="item item-1 border-end">
+            <h2>IDIOMAS</h2>
+            <ul>
+              <li>
+                <h4></h4>
+              </li>
+            </ul>
+          </div>
+          <div class="item item-2 border-end">
+            <h2>FORMACION</h2>
+            <ul></ul>
+          </div>
+          <div class="item item-3">
+            <h2>EXPERENCIA LABORAL</h2>
+            <ul></ul>
+            <h2>APTITUDES</h2>
+            <ul></ul>
+          </div>
+        </div>
+      </main>
+      <footer class="border-top">
+        <ul id="links">
+          <li>
+            <img src="img/envelope.svg" alt="email" />
+            <span></span>
+          </li>
+          <li>
+            <img src="img/telephone.svg" alt="phone" />
+            <span></span>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

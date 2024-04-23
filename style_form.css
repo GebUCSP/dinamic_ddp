@@ -1,0 +1,53 @@
+*{
+    font-family: Montserrat;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    text-align: center;
+
+    & h1{
+        position: absolute;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+form{
+    padding: 80px;
+    margin: 10px;
+
+    & ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+
+        & li{
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 50%;
+            
+            & legend, fieldset{
+                display: flex;
+                justify-self: space-evenly;
+                align-items: center;   
+
+                & label{
+                    margin: 0px 5px;
+                }
+                
+                & select{
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
