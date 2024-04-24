@@ -30,11 +30,16 @@ formulario.addEventListener('submit', function(event) {
     contenedor = document.querySelector('div.item-1 ul li h4');
     contenedor.innerHTML = 'Ingles: ' + datosFormulario.get('ingles');
 
+    contenedor = document.querySelector('div.item-1 ul');
+    let temp = document.createElement('li');
+    temp.innerHTML = '<h4>'+datosFormulario.get('otro_idioma')+'</h4>';
+    contenedor.append(temp);
+
     contenedor = document.querySelector('#main-container div.item-2 ul');
     contenedor.innerHTML = '<h4>Lenguaje: ' + datosFormulario.getAll('lenguajes[]').join('</h4><br><h4>Lenguaje: ');
 
     contenedor = document.querySelector('div.item-3 ul:nth-of-type(2)');
-    let temp = document.createElement('h4');
+    temp = document.createElement('h4');
     temp.textContent = datosFormulario.get('aptitudes');
     contenedor.append(temp);
 
